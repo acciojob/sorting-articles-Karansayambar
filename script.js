@@ -16,9 +16,22 @@ const bands = ['The Plot in You',
 document.addEventListener("DOMContentLoaded", function () {
   const list = document.getElementById('ul');
 
+	const sortedBands = bands.sort((a, b) => {
+        return stripArticles(a) > stripArticles(b) ? 1 : -1;
+      });
+	
   bands.forEach((item) => {
     const li = document.createElement('li');
     li.textContent = item;
     list.appendChild(li);
   });
 });
+
+function stripArticles(str) {
+      const articles = ['a', 'an', 'the'];
+      const words = str.split(' ');
+      if (articles.includes(words[0].toLowerCase())) {
+        words.shift();
+      }
+      return words.join(' ');
+    }
