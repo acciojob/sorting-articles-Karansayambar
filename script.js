@@ -13,14 +13,12 @@ const bands = ['The Plot in You',
 			   'An Old Dog'
 			  ];
 
+document.addEventListener("DOMContentLoaded", function () {
+  const list = document.getElementById('ul');
 
-document.addEventListener("DOMContentLoaded" , function () {
-	const list = document.CreateElement('ul');
-
-	bands.forEach((item) =>{
-		const li = document.CreateElement('li');
-		li.textContent = item;
-		list.appendChild(li);
-	});
-	document.body.appendChild(list);
+  bands.forEach((item) => {
+    const li = document.createElement('li');
+    li.textContent = item;
+    list.appendChild(li);
+  });
 });
