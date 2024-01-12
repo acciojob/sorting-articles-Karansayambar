@@ -48,7 +48,7 @@ function removeCommonWords(name) {
 }
         const sortedBands = bands.sort((a, b) => removeCommonWords(a) > removeCommonWords(b) ? 1 : -1);
     
-        const bandList = document.getElementById('band');
+        const bandList = document.getElementById('bands');
         sortedBands.forEach(band => {
             const listItem = document.createElement('li');
             listItem.textContent = band;
