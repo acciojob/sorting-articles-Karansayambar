@@ -1,4 +1,20 @@
 /*  your css code here. If applicable */
+/*  your css code here. If applicable */
+body{
+	background-image:url(https://picsum.photos/200/300);
+	background-size:cover;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+}
+#band{
+	width:400px;
+	background:white;
+	outline: 15px solid;
+	outline-color: rgb(241,241,232) ;
+}
 #band li {
-      margin-bottom: 5px;
+	list-style-type:square;
+      margin-bottom: 20px;
+	border-bottom:0.1px solid lightgray;
     }
